@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('.questions form').submit(function(event){
     event.preventDefault();
-    //debugger;
+//  debugger;
     $('.questions').hide();
 
 
@@ -11,8 +11,14 @@ $(document).ready(function() {
     var q4=$("input.q4").val();
     var all = [q1,q2,q3,q4];
 
-    alert(all);
-    $('span#array').text(all);
+    $("span#array").text[all];
+    $(".showArray").show[all];
+
+    newArray = ["1","2","3"]
+    all.concat(newArray);
+
+//    $('span#array').show(string);
+//    $('span#array').text(all);
 //    var array = (Q1,Q2,Q3,Q4);
 //    var Q1 = $("span#q1").text(q1);
 //    var Q2 = $("span#q2").text(q2);
@@ -24,8 +30,7 @@ $(document).ready(function() {
 //    $("span#q3").text(q3);
 //    $("span#q4").text(q4);
 
-    console.log('q1',q1,'q2',q2,'q3',q3,'q4',q4);
-
+    console.log(all);
 
   });
 });
