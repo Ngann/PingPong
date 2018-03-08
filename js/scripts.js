@@ -34,3 +34,7 @@ $(document).ready(function() {
 
   });
 });
+
+//pending
+//Then, use push() to add only these elements to a brand new array.
+//Finally, display this new array in your page's HTML as list items in a <ul> tag.
