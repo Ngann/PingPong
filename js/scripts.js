@@ -1,45 +1,23 @@
-var all;
-
-$(document).ready(function() {
-  $('.questions form').submit(function(event){
+$(document).ready(function(){
+  $("form#ping").submit(function(event) {
     event.preventDefault();
-//  debugger;
-    $('.questions').hide();
 
+    var number = parseInt($("input#number").val());
+    var result;
 
-    var q1=$("input.q1").val();
-    var q2=$("input.q2").val();
-    var q3=$("input.q3").val();
-    var q4=$("input.q4").val();
-    all = [q1,q2,q3,q4];
-    var newAll = all.map(x => `<li>${x}</li>`)
-    console.log();
+    if (number % 5 === 0) {
+      result = 'ping'
+    } else if (number % 3 === 0) {
+      result = 'pong'
+    } else if (number % 15 === 0) {
+      result = 'pingpong'
+    } else {
+      result = 'nothing'
+    }
 
-    $("span#array").text(all);
-    $(".showArray").show();
-//    $("ul#newArray").text(all);
-    $("ul#newArray").html(newAll.join(''));
+    $("span#showResult").text(result);
 
-
-
-//    $('span#array').show(string);
-//    $('span#array').text(all);
-//    var array = (Q1,Q2,Q3,Q4);
-//    var Q1 = $("span#q1").text(q1);
-//    var Q2 = $("span#q2").text(q2);
-//    var Q3 = $("span#q3").text(q3);
-//    var Q4 = $("span#q4").text(q4);
-
-//    $("span#q1").text(q1);
-//    $("span#q2").text(q2);
-//    $("span#q3").text(q3);
-//    $("span#q4").text(q4);
-
-    console.log(all);
+    alert(result);
 
   });
 });
-
-//pending
-//Then, use push() to add only these elements to a brand new array.
-//Finally, display this new array in your page's HTML as list items in a <ul> tag.
