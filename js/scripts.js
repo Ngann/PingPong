@@ -1,3 +1,5 @@
+var all;
+
 $(document).ready(function() {
   $('.questions form').submit(function(event){
     event.preventDefault();
@@ -9,13 +11,16 @@ $(document).ready(function() {
     var q2=$("input.q2").val();
     var q3=$("input.q3").val();
     var q4=$("input.q4").val();
-    var all = [q1,q2,q3,q4];
+    all = [q1,q2,q3,q4];
+    var newAll = all.map(x => `<li>${x}</li>`)
+    console.log();
 
     $("span#array").text(all);
     $(".showArray").show();
+//    $("ul#newArray").text(all);
+    $("ul#newArray").html(newAll.join(''));
 
-    newArray = ["1","2","3"]
-    all.concat(newArray);
+
 
 //    $('span#array').show(string);
 //    $('span#array').text(all);
