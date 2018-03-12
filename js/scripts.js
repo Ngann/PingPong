@@ -11,8 +11,8 @@ $(document).ready(function() {
     var q4=$("input.q4").val();
     var all = [q1,q2,q3,q4];
 
-    $("span#array").text[all];
-    $(".showArray").show[all];
+    $("span#array").text(all);
+    $(".showArray").show();
 
     newArray = ["1","2","3"]
     all.concat(newArray);
