@@ -11,9 +11,10 @@ $(document).ready(function(){
     } else if (number % 3 === 0) {
       result = 'pong'
     } else {
-      result = 'nothing'
+      result = (number)
     }
-    $("ul#showResult").append(`<li>${number}${result}</li>`);
+    $("ul#showResult").append(`<li>${result}</li>`);
+    // $("ul#showResult").append(`<li>${number}${result}</li>`);
   //  var add = input.push(number)
 
 
